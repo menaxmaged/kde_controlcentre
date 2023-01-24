@@ -16,18 +16,18 @@
             <default>false</default>
         </entry>
         <entry name="mainIconHeight" type="int">
-            <default>24</default>
+            <default>20</default>
         </entry>
         <entry name="mainIconName" type="string">
-            <default>configure</default>
+            <default>tweaks-app-symbolic</default>
         </entry>
         <entry name="lightTheme" type="String">
             <label>Light Theme</label>
-            <default>BreezeLight</default>
+            <default>Monterey</default>
         </entry>
         <entry name="darkTheme" type="String">
             <label>Dark Theme</label>
-            <default>BreezeDark</default>
+            <default>MontereyDark</default>
         </entry>
         
         <!--    BEHAVIOUR      -->
@@ -41,7 +41,7 @@
             <default>false</default>
         </entry>
         <entry name="showNightColor" type="bool">
-            <default>true</default>
+            <default>false</default>
         </entry>
         <entry name="showColorSwitcher" type="bool">
             <default>true</default>
@@ -65,7 +65,7 @@
             <default>false</default>
         </entry>
         <entry name="showPercentage" type="bool">
-            <default>false</default>
+            <default>true</default>
         </entry>
         
         <!--      HEHEHE GET RICKROLLED LOL        -->
