@@ -88,6 +88,7 @@ Item {
 
             Components.Volume{}
             Components.BrightnessSlider{}
+            Components.PowerModeSlider{}
             Components.MediaPlayer{}
         }
         

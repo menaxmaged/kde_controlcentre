@@ -2,16 +2,16 @@
     "KPlugin": {
         "Authors": [
             {
-                "Email": "prayagjain2@gmail.com",
-                "Name": "Prayag Jain"
+                "Email": "menaxmaged@gmail.com",
+                "Name": "Mena Maged"
             }
         ],
         "Category": "Utilities",
         "Description": "A control centre inspired by MacOS!",
-        "Icon": "configure-toolbars",
-        "Id": "com.github.prayag2.controlcentre",
+        "Icon": "gnome-tweak-tool-symbolic",
+        "Id": "net.codexeg.controlcentre",
         "License": "GPLv3",
-        "Name": "Control Centre",
+        "Name": "Control Center",
         "ServiceTypes": [
             "Plasma/Applet"
         ],

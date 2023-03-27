@@ -23,11 +23,11 @@
         </entry>
         <entry name="lightTheme" type="String">
             <label>Light Theme</label>
-            <default>Monterey</default>
+            <default>Ventura</default>
         </entry>
         <entry name="darkTheme" type="String">
             <label>Dark Theme</label>
-            <default>MontereyDark</default>
+            <default>Ventura-Dark</default>
         </entry>
         
         <!--    BEHAVIOUR      -->
