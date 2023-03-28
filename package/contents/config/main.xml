@@ -67,6 +67,9 @@
         <entry name="showPercentage" type="bool">
             <default>true</default>
         </entry>
+         <entry name="showLowpower" type="bool">
+            <default>false</default>
+        </entry>
         
         <!--      HEHEHE GET RICKROLLED LOL        -->
         <entry name="cmdRun1" type="string">

@@ -53,6 +53,7 @@ Item {
                 spacing: 0
                 
                 Components.DndButton{}
+                
                 RowLayout {
                     spacing: 0
                     
@@ -74,7 +75,12 @@ Item {
                     Components.KDEConnect{}
                     Components.RedShift{}
                     Components.ColorSchemeSwitcher{}
+                    Components.Lowpower{}                    
+
                 }
+
+
+               
             }
         }
         Item {
@@ -86,9 +92,8 @@ Item {
             spacing: 0
             Layout.fillWidth: true
 
-            Components.Volume{}
             Components.BrightnessSlider{}
-            Components.PowerModeSlider{}
+            Components.Volume{}
             Components.MediaPlayer{}
         }
         

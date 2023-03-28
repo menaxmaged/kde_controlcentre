@@ -12,6 +12,8 @@ ColumnLayout {
     property alias cfg_scale: scale.value
     property alias cfg_transparency: transparency.checked
     property alias cfg_showKDEConnect: showKDEConnect.checked
+    property alias cfg_showLowpower: showLowpower.checked
+
     property alias cfg_showNightColor: showNightColor.checked
     property alias cfg_showColorSwitcher: showColorSwitcher.checked
     property alias cfg_showVolume: showVolume.checked
@@ -28,7 +30,7 @@ ColumnLayout {
     property alias cfg_cmdRun2: cmdRun2.text
     property alias cfg_cmdTitle2: cmdTitle2.text
 
-    property int numChecked: showKDEConnect.checked + showColorSwitcher.checked + showNightColor.checked + showCmd1.checked + showCmd2.checked
+    property int numChecked: showKDEConnect.checked + showColorSwitcher.checked + showNightColor.checked + showCmd1.checked + showCmd2.checked + showLowpower.checked
     property int maxNum: 2
 
     // Used to select icons
@@ -83,6 +85,11 @@ ColumnLayout {
         CheckBox {
             id: showNightColor
             text: i18n('Night Color')
+            enabled: !checked && numChecked < maxNum || checked
+        }
+          CheckBox {
+            id: showLowpower
+            text: i18n('Low Power Mode')
             enabled: !checked && numChecked < maxNum || checked
         }
         CheckBox {
@@ -167,6 +174,7 @@ ColumnLayout {
             id: showMediaPlayer
             text: i18n('Media Player')
         }
+        
     }
 
     Item {

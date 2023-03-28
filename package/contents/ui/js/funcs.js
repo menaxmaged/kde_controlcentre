@@ -116,3 +116,9 @@ function volIconName(volume, muted, prefix) {
     }
     return icon;
 }
+
+function getPowerMode(){
+ var  mode = true;
+
+    return mode;
+}

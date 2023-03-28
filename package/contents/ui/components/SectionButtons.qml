@@ -1,10 +1,12 @@
 import QtQml 2.0
 import QtQuick 2.0
 import QtQuick.Layouts 1.15
+import Qt.labs.deviceinfo 1.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.bluezqt 1.0 as BluezQt
 import org.kde.kquickcontrolsaddons 2.0
+import org.kde.plasma.networkmanagement 0.2 as PlasmaNM
 
 import "../lib" as Lib
 import "../js/funcs.js" as Funcs
@@ -15,6 +17,8 @@ Lib.Card {
     Layout.fillHeight: true
     
     // NETWORK
+    property string wifiNetworkName: ""
+
     property var network: network
     Network {
         id: network
@@ -22,7 +26,21 @@ Lib.Card {
     
     // BLUETOOTH
     property QtObject btManager : BluezQt.Manager
-    
+
+   Component.onCompleted: {
+        var devices = Solid.Networking.networkInterfaces()
+        for (var i = 0; i < devices.length; ++i) {
+            var device = devices[i]
+            if (device.type == Solid.DeviceInterface.NetworkWireless) {
+                var wifiInterface = Solid.WirelessInterface(device)
+                if (wifiInterface.isValid && wifiInterface.status == Solid.WirelessInterface.Associated) {
+                    wifiNetworkName = wifiInterface.currentAccessPoint.ssid
+                    break
+                }
+            }
+        }
+    } 
+   
     // All Buttons
     ColumnLayout {
         id: buttonsColumn
@@ -32,7 +50,7 @@ Lib.Card {
         spacing: 0
         
         Lib.LongButton {
-            title: i18n("Network")
+            title:  wifiNetworkName
             subtitle: network.networkStatus
             source: network.activeConnectionIcon
             sourceColor: network.networkStatus === "Connected" ? PlasmaCore.Theme.highlightColor : PlasmaCore.Theme.disabledTextColor
