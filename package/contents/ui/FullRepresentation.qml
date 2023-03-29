@@ -43,7 +43,7 @@ Item {
             spacing: 0
             Layout.fillWidth: true
             Layout.preferredHeight: root.sectionHeight
-            Layout.maximumHeight: root.sectionHeight
+            Layout.maximumHeight: root.sectionHeight * 4
             
             // Network, Bluetooth and Settings Button
             Components.SectionButtons{}
@@ -74,11 +74,17 @@ Item {
                     // Other blocks
                     Components.KDEConnect{}
                     Components.RedShift{}
+                         
+
+                }
+          RowLayout {
+                    spacing: 0
+                 
+                    // Other blocks
                     Components.ColorSchemeSwitcher{}
                     Components.Lowpower{}                    
 
                 }
-
 
                
             }

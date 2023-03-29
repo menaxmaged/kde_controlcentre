@@ -45,6 +45,8 @@ Item {
     property bool showCmd2: plasmoid.configuration.showCmd2
     property bool showPercentage: plasmoid.configuration.showPercentage
     property bool showLowpower: plasmoid.configutation.showLowpower    
+    property bool lowpoweron: plasmoid.configuration.lowpoweron
+
     property string cmdRun1: plasmoid.configuration.cmdRun1
     property string cmdTitle1: plasmoid.configuration.cmdTitle1
     property string cmdIcon1: plasmoid.configuration.cmdIcon1

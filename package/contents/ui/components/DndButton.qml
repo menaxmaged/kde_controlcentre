@@ -10,7 +10,7 @@ Lib.CardButton {
     Layout.columnSpan: 2
     Layout.fillWidth: true
     Layout.fillHeight: true
-    title: i18n("Do Not Disturb")
+    title: i18n("Focus Mode")
     
     Component.onCompleted: updateIcon()
     

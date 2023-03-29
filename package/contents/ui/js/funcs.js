@@ -117,8 +117,15 @@ function volIconName(volume, muted, prefix) {
     return icon;
 }
 
-function getPowerMode(){
- var  mode = true;
 
-    return mode;
+
+
+function getPowerMode(){
+ //get info from system using terminal  linux command "powerprofilesctl get" with 
+    var powerMode = exec("powerprofilesctl get");
+    return true;
 }
+  
+
+
+ 

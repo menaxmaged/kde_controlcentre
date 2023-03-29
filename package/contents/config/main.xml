@@ -27,7 +27,7 @@
         </entry>
         <entry name="darkTheme" type="String">
             <label>Dark Theme</label>
-            <default>Ventura-Dark</default>
+            <default>VenturaDark</default>
         </entry>
         
         <!--    BEHAVIOUR      -->
@@ -68,6 +68,9 @@
             <default>true</default>
         </entry>
          <entry name="showLowpower" type="bool">
+            <default>true</default>
+        </entry>
+         <entry name="lowpoweron" type="bool">
             <default>false</default>
         </entry>
         
