@@ -15,15 +15,17 @@ Lib.CardButton {
     visible: root.showColorSwitcher
     Layout.fillHeight: true
     Layout.fillWidth: true
-    title: i18n(Plasmoid.configuration.isDarkTheme ? "Light Theme" : "Dark Theme")
+    title: i18n(plasmoid.configuration.isDarkTheme ? "Dark Theme" : "Light Theme")
     PlasmaCore.IconItem {
         anchors.fill: parent
-        source: Plasmoid.configuration.isDarkTheme ? "brightness-high" : "brightness-low"
+        source: plasmoid.configuration.isDarkTheme ? "dark-mode-symbolic" : "light-mode-symbolic"
     }
 
     onClicked: {
         executable.swapColorScheme();
-        Plasmoid.configuration.isDarkTheme = !Plasmoid.configuration.isDarkTheme
+        plasmoid.configuration.isDarkTheme = !plasmoid.configuration.isDarkTheme
+        colorSchemeSwitcher.source = plasmoid.configuration.isDarkTheme ? "dark-mode-symbolic" : "light-mode-symbolic"
+
     }
 
     PlasmaCore.DataSource {
@@ -39,8 +41,8 @@ Lib.CardButton {
         }
 
         function swapColorScheme() {
-            var colorSchemeName = Plasmoid.configuration.isDarkTheme ? Plasmoid.configuration.lightTheme : Plasmoid.configuration.darkTheme
-            exec("plasma-apply-colorscheme " + colorSchemeName)
+            var colorSchemeName = plasmoid.configuration.isDarkTheme ? "light" : "dark"
+            exec("theme-switcher.sh " + colorSchemeName)
         }
     }
 }

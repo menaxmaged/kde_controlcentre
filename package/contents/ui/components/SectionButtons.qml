@@ -16,7 +16,7 @@ Lib.Card {
     Layout.fillHeight: true
     
     // NETWORK
-    property string wifiNetworkName: ""
+    property string wifiNetworkName: "dsdfd"
 
     property var network: network
     Network {
@@ -61,15 +61,6 @@ Lib.Card {
                 KCMShell.openSystemSettings("")
             }
         }
-            Lib.LongButton {
-            title:  wifiNetworkName
-            subtitle: network.networkStatus
-            source: network.activeConnectionIcon
-            sourceColor: network.networkStatus === "Connected" ? PlasmaCore.Theme.highlightColor : PlasmaCore.Theme.disabledTextColor
-            onClicked: {
-                sectionNetworks.toggleNetworkSection()
-            }
-        }
-    
+        
     }
 }

@@ -22,13 +22,15 @@ Lib.CardButton {
     visible: plasmoid.configuration.showLowpower
     Layout.fillWidth: true
     Layout.fillHeight: true
-  title: i18n("")
+ // title: i18n("")
  // Component.onCompleted: updateIcon()
  PlasmaCore.IconItem {
         id: lowpowIcon
-        source: plasmoid.configuration.lowpoweron ? "battery-full-lowpower.svg" : "battery-full"
-        anchors.fill: parent
+        source: plasmoid.configuration.lowpoweron ? "battery-full-lowpower" : "battery-full"
+//        anchors.fill: parent
        
+    Layout.fillWidth: true
+    Layout.fillHeight: true
 
       //
        // Alignment.horizontalCenter: parent.horizontalCenter
@@ -50,7 +52,7 @@ function setpowermode(profile){
         lowpowIcon.source = "battery-full-lowpower.svg"   
         plasmoid.configuration.lowpoweron = true
     }else{
-        lowpowIcon.source = "battery-full"
+        lowpowIcon.source = "battery-full.svg"
         plasmoid.configuration.lowpoweron = false
     }
 }

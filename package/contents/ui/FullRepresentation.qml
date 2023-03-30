@@ -74,17 +74,11 @@ Item {
                     // Other blocks
                     Components.KDEConnect{}
                     Components.RedShift{}
-                         
-
-                }
-          RowLayout {
-                    spacing: 0
-                 
-                    // Other blocks
                     Components.ColorSchemeSwitcher{}
-                    Components.Lowpower{}                    
+                    Components.Lowpower{}               
 
                 }
+      
 
                
             }

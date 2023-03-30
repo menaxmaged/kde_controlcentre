@@ -64,7 +64,7 @@ Lib.Card {
 
                     PlasmaComponents.Label {
                         text: i18n("Network Connections")
-                        font.pixelSize: root.largeFontSize * 1.2
+                        font.pixelSize: root.largeFontSize * 1.0
                         Layout.fillWidth: true
                     }
 
